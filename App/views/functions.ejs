@@ -1,0 +1,19 @@
+<%
+getnotedata = function() {
+    var notenumber = document.getElementById('notenumber').value
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://localhost:3000/getdata/"+notenumber,
+        "method": "GET",
+        "headers": {
+          "cache-control": "no-cache"
+        }
+      }
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+       
+      });
+}
+%>
